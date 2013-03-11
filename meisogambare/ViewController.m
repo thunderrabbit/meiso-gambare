@@ -63,6 +63,7 @@ NSString * prefSendFBs = @"prefface";
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 
         [self revealCountdownTimer];
+        [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     } else if(self.state == StateCounting) {
         if(self.timer != nil) {
             [self.timer invalidate];
@@ -71,9 +72,11 @@ NSString * prefSendFBs = @"prefface";
         self.state = StateWaiting;
         [self revealTimePicker];
         [self.goButton setTitle:@"go" forState:UIControlStateNormal];
+        [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
     } else if(self.state == StateExtraTime) {
-        [self.goButton setTitle:@"go" forState:UIControlStateNormal];
         self.state = StateStoppedAfterGoalTime;
+        [self.goButton setTitle:@"go" forState:UIControlStateNormal];
+        [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
     }
 }
 
