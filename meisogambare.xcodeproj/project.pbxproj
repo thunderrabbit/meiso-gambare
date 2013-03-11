@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0B07E8016EE225E00D571B1 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = C0B07E7F16EE225E00D571B1 /* click.caf */; };
+		C0B07E8316EE227300D571B1 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B07E8216EE227300D571B1 /* Sound.m */; };
+		C0B07E8516EE239D00D571B1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B07E8416EE239D00D571B1 /* AudioToolbox.framework */; };
 		C0C4499B16EA14570059CBF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4499A16EA14570059CBF2 /* UIKit.framework */; };
 		C0C4499D16EA14570059CBF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4499C16EA14570059CBF2 /* Foundation.framework */; };
 		C0C4499F16EA14570059CBF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4499E16EA14570059CBF2 /* CoreGraphics.framework */; };
@@ -25,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0B07E7F16EE225E00D571B1 /* click.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.caf; sourceTree = "<group>"; };
+		C0B07E8116EE227300D571B1 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		C0B07E8216EE227300D571B1 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		C0B07E8416EE239D00D571B1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C0C4499716EA14570059CBF2 /* meisogambare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meisogambare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C4499A16EA14570059CBF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C0C4499C16EA14570059CBF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B07E8516EE239D00D571B1 /* AudioToolbox.framework in Frameworks */,
 				C0C449C316EC02AE0059CBF2 /* Accounts.framework in Frameworks */,
 				C0C449C116EB440E0059CBF2 /* Social.framework in Frameworks */,
 				C0C4499B16EA14570059CBF2 /* UIKit.framework in Frameworks */,
@@ -64,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0B07E7E16EE224200D571B1 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				C0B07E8116EE227300D571B1 /* Sound.h */,
+				C0B07E8216EE227300D571B1 /* Sound.m */,
+				C0B07E7F16EE225E00D571B1 /* click.caf */,
+			);
+			name = audio;
+			sourceTree = "<group>";
+		};
 		C0C4498E16EA14570059CBF2 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +102,7 @@
 		C0C4499916EA14570059CBF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0B07E8416EE239D00D571B1 /* AudioToolbox.framework */,
 				C0C449C216EC02AE0059CBF2 /* Accounts.framework */,
 				C0C449C016EB440E0059CBF2 /* Social.framework */,
 				C0C4499A16EA14570059CBF2 /* UIKit.framework */,
@@ -110,6 +129,7 @@
 		C0C449A116EA14570059CBF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0B07E7E16EE224200D571B1 /* audio */,
 				C0C449C616EC89520059CBF2 /* config.h */,
 				C0C449C716EC89520059CBF2 /* config.m */,
 				C0C449A216EA14570059CBF2 /* meisogambare-Info.plist */,
@@ -180,6 +200,7 @@
 				C0C449B116EA14570059CBF2 /* Default-568h@2x.png in Resources */,
 				C0C449B416EA14570059CBF2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C0C449B716EA14570059CBF2 /* MainStoryboard_iPad.storyboard in Resources */,
+				C0B07E8016EE225E00D571B1 /* click.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +215,7 @@
 				C0C449AB16EA14570059CBF2 /* AppDelegate.m in Sources */,
 				C0C449BA16EA14570059CBF2 /* ViewController.m in Sources */,
 				C0C449C816EC89520059CBF2 /* config.m in Sources */,
+				C0B07E8316EE227300D571B1 /* Sound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

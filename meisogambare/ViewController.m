@@ -29,6 +29,7 @@ NSString * prefSendFBs = @"prefface";
 @property (strong) NSDateFormatter *dateformatter;
 @property int secondsCompletedGoal;
 @property int secondsCompletedExtra;
+@property Sound * click;
 
 @end
 
@@ -80,6 +81,9 @@ NSString * prefSendFBs = @"prefface";
     self.goalTimeRemain -= 1 * TIME_DIALATION;
     [self addThisManySecondsToDate:-1 * TIME_DIALATION];
 
+    if (0 <= self.goalTimeRemain && self.goalTimeRemain < 3) {
+        [self.click play];
+    }
     if (self.goalTimeRemain <= 0) // Goal time reached, so start counting up.
     {
         self.secondsCompletedGoal = self.countdownPicker.countDownDuration;
@@ -172,11 +176,11 @@ NSString * prefSendFBs = @"prefface";
         int goalMinutes = self.secondsCompletedGoal / 60;
         int extraMinutes = self.secondsCompletedExtra / 60;
         if(extraMinutes > 1) {
-            [self tweetThis:[NSString stringWithFormat:@"just successfully meditated for %d minutes plus %d bonus minutes",goalMinutes,extraMinutes]];
+            [self tweetThis:[NSString stringWithFormat:@"just successfully meditated with @meisogambare timer for %d minutes plus %d bonus minutes",goalMinutes,extraMinutes]];
         } else if(extraMinutes == 1) {
-            [self tweetThis:[NSString stringWithFormat:@"just successfully meditated for %d minutes plus %d bonus minute",goalMinutes,extraMinutes]];
+            [self tweetThis:[NSString stringWithFormat:@"just successfully meditated with @meisogambare timer for %d minutes plus %d bonus minute",goalMinutes,extraMinutes]];
         } else {
-            [self tweetThis:[NSString stringWithFormat:@"just successfully meditated for %d minutes",goalMinutes]];
+            [self tweetThis:[NSString stringWithFormat:@"just successfully meditated with @meisogambare timer for %d minutes",goalMinutes]];
         }
     }
     if(self.facebookBoolean.isOn) {
@@ -233,7 +237,9 @@ NSString * prefSendFBs = @"prefface";
     self.timeRemainLabel.alpha = 0;
     self.dateformatter = [[NSDateFormatter alloc] init];
     [self.dateformatter setDateFormat:@"HH:mm:ss"];
+    self.click = [[Sound alloc] initWithPath:@"click.caf"];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
