@@ -16,7 +16,7 @@ typedef enum {
     StateStoppedAfterGoalTime
 }  MeditationState;
 
-const int  TIME_DIALATION = 31;
+const int  TIME_DIALATION = 1;
 NSString * prefSendTweets = @"preftweet";
 NSString * prefSendFBs = @"prefface";
 

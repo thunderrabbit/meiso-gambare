@@ -21,7 +21,6 @@
 		C0C449AF16EA14570059CBF2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C449AE16EA14570059CBF2 /* Default@2x.png */; };
 		C0C449B116EA14570059CBF2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C449B016EA14570059CBF2 /* Default-568h@2x.png */; };
 		C0C449B416EA14570059CBF2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C449B216EA14570059CBF2 /* MainStoryboard_iPhone.storyboard */; };
-		C0C449B716EA14570059CBF2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C449B516EA14570059CBF2 /* MainStoryboard_iPad.storyboard */; };
 		C0C449BA16EA14570059CBF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C449B916EA14570059CBF2 /* ViewController.m */; };
 		C0C449C116EB440E0059CBF2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C449C016EB440E0059CBF2 /* Social.framework */; };
 		C0C449C316EC02AE0059CBF2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C449C216EC02AE0059CBF2 /* Accounts.framework */; };
@@ -49,7 +48,6 @@
 		C0C449AE16EA14570059CBF2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C0C449B016EA14570059CBF2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C0C449B316EA14570059CBF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		C0C449B616EA14570059CBF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C0C449B816EA14570059CBF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C0C449B916EA14570059CBF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C0C449C016EB440E0059CBF2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -130,7 +128,6 @@
 				C0C449A916EA14570059CBF2 /* AppDelegate.h */,
 				C0C449AA16EA14570059CBF2 /* AppDelegate.m */,
 				C0C449B216EA14570059CBF2 /* MainStoryboard_iPhone.storyboard */,
-				C0C449B516EA14570059CBF2 /* MainStoryboard_iPad.storyboard */,
 				C0C449B816EA14570059CBF2 /* ViewController.h */,
 				C0C449B916EA14570059CBF2 /* ViewController.m */,
 				C0C449A116EA14570059CBF2 /* Supporting Files */,
@@ -212,7 +209,6 @@
 				C0C449AF16EA14570059CBF2 /* Default@2x.png in Resources */,
 				C0C449B116EA14570059CBF2 /* Default-568h@2x.png in Resources */,
 				C0C449B416EA14570059CBF2 /* MainStoryboard_iPhone.storyboard in Resources */,
-				C0C449B716EA14570059CBF2 /* MainStoryboard_iPad.storyboard in Resources */,
 				C0B07E8016EE225E00D571B1 /* click.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,14 +246,6 @@
 				C0C449B316EA14570059CBF2 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C0C449B516EA14570059CBF2 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0C449B616EA14570059CBF2 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -328,6 +316,7 @@
 				GCC_PREFIX_HEADER = "meisogambare/meisogambare-Prefix.pch";
 				INFOPLIST_FILE = "meisogambare/meisogambare-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -339,6 +328,7 @@
 				GCC_PREFIX_HEADER = "meisogambare/meisogambare-Prefix.pch";
 				INFOPLIST_FILE = "meisogambare/meisogambare-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
