@@ -10,6 +10,7 @@
 		C0B07E8016EE225E00D571B1 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = C0B07E7F16EE225E00D571B1 /* click.caf */; };
 		C0B07E8316EE227300D571B1 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B07E8216EE227300D571B1 /* Sound.m */; };
 		C0B07E8516EE239D00D571B1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B07E8416EE239D00D571B1 /* AudioToolbox.framework */; };
+		C0B07EDD16F206ED00D571B1 /* UIColor-MoreColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B07EDC16F206ED00D571B1 /* UIColor-MoreColors.m */; };
 		C0C4499B16EA14570059CBF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4499A16EA14570059CBF2 /* UIKit.framework */; };
 		C0C4499D16EA14570059CBF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4499C16EA14570059CBF2 /* Foundation.framework */; };
 		C0C4499F16EA14570059CBF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C4499E16EA14570059CBF2 /* CoreGraphics.framework */; };
@@ -32,6 +33,8 @@
 		C0B07E8116EE227300D571B1 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		C0B07E8216EE227300D571B1 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
 		C0B07E8416EE239D00D571B1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C0B07EDB16F206ED00D571B1 /* UIColor-MoreColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-MoreColors.h"; sourceTree = "<group>"; };
+		C0B07EDC16F206ED00D571B1 /* UIColor-MoreColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-MoreColors.m"; sourceTree = "<group>"; };
 		C0C4499716EA14570059CBF2 /* meisogambare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meisogambare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C4499A16EA14570059CBF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C0C4499C16EA14570059CBF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,6 +85,15 @@
 			name = audio;
 			sourceTree = "<group>";
 		};
+		C0B07EDA16F206DC00D571B1 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0B07EDB16F206ED00D571B1 /* UIColor-MoreColors.h */,
+				C0B07EDC16F206ED00D571B1 /* UIColor-MoreColors.m */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
 		C0C4498E16EA14570059CBF2 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 		C0C449A116EA14570059CBF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0B07EDA16F206DC00D571B1 /* extensions */,
 				C0B07E7E16EE224200D571B1 /* audio */,
 				C0C449C616EC89520059CBF2 /* config.h */,
 				C0C449C716EC89520059CBF2 /* config.m */,
@@ -216,6 +229,7 @@
 				C0C449BA16EA14570059CBF2 /* ViewController.m in Sources */,
 				C0C449C816EC89520059CBF2 /* config.m in Sources */,
 				C0B07E8316EE227300D571B1 /* Sound.m in Sources */,
+				C0B07EDD16F206ED00D571B1 /* UIColor-MoreColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

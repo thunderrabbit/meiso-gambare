@@ -16,7 +16,7 @@ typedef enum {
     StateStoppedAfterGoalTime
 }  MeditationState;
 
-const int  TIME_DIALATION = 1;
+const int  TIME_DIALATION = 31;
 NSString * prefSendTweets = @"preftweet";
 NSString * prefSendFBs = @"prefface";
 
@@ -30,11 +30,19 @@ NSString * prefSendFBs = @"prefface";
 @property int secondsCompletedGoal;
 @property int secondsCompletedExtra;
 @property Sound * click;
+@property UIColor * baseColor;
+@property UIColor * countdownColor;
+@property UIColor * bonusTimeColor;
 
 @end
 
 @implementation ViewController
 
+- (void) setupColors {
+    self.baseColor = [UIColor wheat];
+    self.countdownColor = [UIColor internationalKleinBlue];
+    self.bonusTimeColor = [UIColor kellyGreen];
+}
 - (void) addThisManySecondsToDate:(int)seconds {
     self.goalDateFTW = [self.goalDateFTW dateByAddingTimeInterval:seconds];
     self.timeRemainLabel.text = [NSString stringWithFormat:@"%@",[self.dateformatter stringFromDate:self.goalDateFTW]];
@@ -62,6 +70,7 @@ NSString * prefSendFBs = @"prefface";
 
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 
+        [self.view setBackgroundColor:self.countdownColor];
         [self revealCountdownTimer];
         [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     } else if(self.state == StateCounting) {
@@ -69,11 +78,13 @@ NSString * prefSendFBs = @"prefface";
             [self.timer invalidate];
             self.timer = nil;
         }
+        [self.view setBackgroundColor:self.baseColor];
         self.state = StateWaiting;
         [self revealTimePicker];
         [self.goButton setTitle:@"go" forState:UIControlStateNormal];
         [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
     } else if(self.state == StateExtraTime) {
+        [self.view setBackgroundColor:self.baseColor];
         self.state = StateStoppedAfterGoalTime;
         [self.goButton setTitle:@"go" forState:UIControlStateNormal];
         [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
@@ -91,6 +102,7 @@ NSString * prefSendFBs = @"prefface";
     {
         self.secondsCompletedGoal = self.countdownPicker.countDownDuration;
         self.state = StateExtraTime;
+        [self.view setBackgroundColor:self.bonusTimeColor];
         if(self.timer != nil) {
             [self.timer invalidate];
             self.timer = nil;
@@ -236,6 +248,8 @@ NSString * prefSendFBs = @"prefface";
 {
     [super viewDidLoad];
     [self checkSettings];
+    [self setupColors];
+    [self.view setBackgroundColor:self.baseColor];
     self.state = StateWaiting;
     self.timeRemainLabel.alpha = 0;
     self.dateformatter = [[NSDateFormatter alloc] init];
