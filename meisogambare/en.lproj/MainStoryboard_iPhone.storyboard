@@ -66,11 +66,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="twitterToggled:" destination="2" eventType="valueChanged" id="e7g-Tz-mdh"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKK-8L-jLk">
-                                <connections>
-                                    <action selector="facebookToggled:" destination="2" eventType="valueChanged" id="3MZ-zI-Y3W"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG4-Se-twB">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="217" id="EWa-tX-ENm"/>
@@ -85,26 +80,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-5A-tGB">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RpD-a0-Oxy" firstAttribute="top" secondItem="4RG-m3-04U" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0rK-Fm-pe6"/>
-                            <constraint firstItem="ALA-p9-ygD" firstAttribute="leading" secondItem="4RG-m3-04U" secondAttribute="leading" type="default" id="3Vc-pt-sp3"/>
-                            <constraint firstItem="ALA-p9-ygD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="54" id="3ta-tO-km8"/>
-                            <constraint firstItem="wF9-5A-tGB" firstAttribute="baseline" secondItem="RpD-a0-Oxy" secondAttribute="baseline" type="default" id="5ax-17-c43"/>
+                            <constraint firstItem="ALA-p9-ygD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="121" id="5iT-zb-cEP"/>
                             <constraint firstItem="4RG-m3-04U" firstAttribute="top" secondItem="3" secondAttribute="top" constant="244" id="BuG-ez-EZ4"/>
-                            <constraint firstItem="iG4-Se-twB" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="FD2-JI-cxP"/>
-                            <constraint firstItem="wF9-5A-tGB" firstAttribute="trailing" secondItem="4RG-m3-04U" secondAttribute="trailing" type="default" id="WFr-Nj-3Qg"/>
-                            <constraint firstItem="RpD-a0-Oxy" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="65" id="b6f-r6-03o"/>
+                            <constraint firstItem="RpD-a0-Oxy" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="132" id="Opv-vQ-sbn"/>
                             <constraint firstItem="i1b-Zc-jR7" firstAttribute="centerX" secondItem="iG4-Se-twB" secondAttribute="centerX" type="default" id="cDh-Ta-QSp"/>
                             <constraint firstItem="4RG-m3-04U" firstAttribute="top" secondItem="i1b-Zc-jR7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hSe-1i-tbE"/>
-                            <constraint firstItem="wF9-5A-tGB" firstAttribute="centerX" secondItem="MKK-8L-jLk" secondAttribute="centerX" type="default" id="lXA-JO-Eq2"/>
-                            <constraint firstItem="MKK-8L-jLk" firstAttribute="top" secondItem="wF9-5A-tGB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oZk-Sz-zZ0"/>
+                            <constraint firstItem="4RG-m3-04U" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="54" id="kRR-sX-mhO"/>
+                            <constraint firstItem="ALA-p9-ygD" firstAttribute="centerX" secondItem="iG4-Se-twB" secondAttribute="centerX" type="default" id="n0x-G5-uOe"/>
                             <constraint firstItem="ALA-p9-ygD" firstAttribute="top" secondItem="RpD-a0-Oxy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rxP-fM-Rf5"/>
                             <constraint firstItem="iG4-Se-twB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="70" id="tNX-ki-FqW"/>
                             <constraint firstItem="i1b-Zc-jR7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="zXY-hk-G4l"/>
@@ -113,7 +99,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="cAu-iE-xbt"/>
                     <connections>
                         <outlet property="countdownPicker" destination="i1b-Zc-jR7" id="KKI-TT-I29"/>
-                        <outlet property="facebookBoolean" destination="MKK-8L-jLk" id="ygU-xs-ECC"/>
                         <outlet property="goButton" destination="4RG-m3-04U" id="axk-Xe-SeE"/>
                         <outlet property="timeRemainLabel" destination="iG4-Se-twB" id="U12-Sb-UOH"/>
                         <outlet property="twitterBoolean" destination="ALA-p9-ygD" id="hZK-TK-Uhj"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C052262216F4589D00C34E69 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C052262116F4589D00C34E69 /* Icon@2x.png */; };
+		C052262416F458A100C34E69 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C052262316F458A100C34E69 /* Icon.png */; };
 		C0B07E8016EE225E00D571B1 /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = C0B07E7F16EE225E00D571B1 /* click.caf */; };
 		C0B07E8316EE227300D571B1 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B07E8216EE227300D571B1 /* Sound.m */; };
 		C0B07E8516EE239D00D571B1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B07E8416EE239D00D571B1 /* AudioToolbox.framework */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C052262116F4589D00C34E69 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		C052262316F458A100C34E69 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C0B07E7F16EE225E00D571B1 /* click.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.caf; sourceTree = "<group>"; };
 		C0B07E8116EE227300D571B1 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		C0B07E8216EE227300D571B1 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		C0C4498E16EA14570059CBF2 = {
 			isa = PBXGroup;
 			children = (
+				C052262316F458A100C34E69 /* Icon.png */,
+				C052262116F4589D00C34E69 /* Icon@2x.png */,
 				C0C449A016EA14570059CBF2 /* meisogambare */,
 				C0C4499916EA14570059CBF2 /* Frameworks */,
 				C0C4499816EA14570059CBF2 /* Products */,
@@ -210,6 +216,8 @@
 				C0C449B116EA14570059CBF2 /* Default-568h@2x.png in Resources */,
 				C0C449B416EA14570059CBF2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C0B07E8016EE225E00D571B1 /* click.caf in Resources */,
+				C052262216F4589D00C34E69 /* Icon@2x.png in Resources */,
+				C052262416F458A100C34E69 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +323,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "meisogambare/meisogambare-Prefix.pch";
 				INFOPLIST_FILE = "meisogambare/meisogambare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -327,6 +336,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "meisogambare/meisogambare-Prefix.pch";
 				INFOPLIST_FILE = "meisogambare/meisogambare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
